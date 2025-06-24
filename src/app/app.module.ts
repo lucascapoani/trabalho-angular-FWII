@@ -7,13 +7,15 @@ import { FormsModule } from '@angular/forms';
 import { TestComponentComponent } from './test-component/test-component.component';
 import { TabelaProdutosComponent } from './tabela-produtos/tabela-produtos.component';
 import { FormProdutosComponent } from './form-produtos/form-produtos.component';
+import { CardProdutoComponent } from './card-produto/card-produto.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TestComponentComponent,
     TabelaProdutosComponent,
-    FormProdutosComponent
+    FormProdutosComponent,
+    CardProdutoComponent
   ],
   imports: [
     BrowserModule,

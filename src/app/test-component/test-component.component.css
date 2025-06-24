@@ -1,0 +1,11 @@
+button {
+    background-color: #00318b;
+    color: white;
+    padding: 10px 12px;
+    margin: 8px 0;
+}
+
+button:disabled, button[disabled] {
+    background-color: #cccccc;
+    color: #666666;
+}
