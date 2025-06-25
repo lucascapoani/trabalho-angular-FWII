@@ -1,25 +1,30 @@
-<h3>Formulário de Produtos</h3>
+<div class="container">
+    <h3>Formulário de Produtos</h3>
 
-<div>
-    <label for="id">ID:</label>
-    <input type="number" [(ngModel)]="produto.id" id="id">
-    <br />
+    <div>
+        <div class="mb-3">
+            <label for="id" class="form-label">ID:</label>
+            <input type="number" [(ngModel)]="produto.id" id="id" class="form-control" placeholder="id ..">
+        </div>
 
-    <label for="nome">NOME:</label>
-    <input type="text" [(ngModel)]="produto.nome" id="nome">
-    <br />
+        <div class="mb-3">
+            <label for="nome" class="form-label">NOME:</label>
+            <input type="text" [(ngModel)]="produto.nome" id="nome" class="form-control" placeholder="Nome do filme">
+        </div>
 
-    <label for="preco">PREÇO:</label>
-    <input type="number" [(ngModel)]="produto.preco" id="preco">
-    <br />
+        <div class="mb-3">
+            <label for="preco" class="form-label">PREÇO:</label>
+            <input type="number" [(ngModel)]="produto.preco" id="preco" class="form-control" placeholder="Preço $$">
+        </div>
 
-    <button (click)="cadastrarProduto()">Cadastrar</button>
+        <button class="btn btn-primary" (click)="cadastrarProduto()">Cadastrar</button>
+    </div>
+
+    {{produto | json}}
+
+    <ul>
+        <li *ngFor="let prod of listProdutos">
+            {{prod | json}}
+        </li>
+    </ul>
 </div>
-
-{{produto | json}}
-
-<ul>
-    <li *ngFor="let prod of listProdutos">
-        {{prod | json}}
-    </li>
-</ul>

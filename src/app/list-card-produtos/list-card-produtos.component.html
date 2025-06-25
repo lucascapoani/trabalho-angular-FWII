@@ -1,7 +1,7 @@
 <h3>ListCard de Filmes</h3>
 
 <div class="row">
-    <div class="column" *ngFor="let prod of listaProdutos">
-        <app-card-produto [produto]="prod"></app-card-produto>
+    <div class="col col-xl-3 col-lh-4 col-sm-6 col-12" *ngFor="let prod of listaProdutos">
+        <app-card-produto class="p-3" [produto]="prod"></app-card-produto>
     </div>
 </div>
