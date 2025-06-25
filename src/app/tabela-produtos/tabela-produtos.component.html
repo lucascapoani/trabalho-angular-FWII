@@ -1,14 +1,23 @@
-<h3>Tabela de Filmes</h3>
+<div class="container">
+    <h3>Tabela de Filmes</h3>
+    <h4 *ngIf="listaProdutos.length ==0">
+        Não há filmes cadastrados!
+    </h4>
 
-<table>
-    <tr>
-        <th>ID</th>
-        <th>NOME</th>
-        <th>PREÇO</th>
-    </tr>
-    <tr *ngFor="let produto of listaProdutos">
-        <td>{{produto.id}}</td>
-        <td>{{produto.nome}}</td>
-        <td>{{produto.preco}}</td>
-    </tr>
-</table>
+    <table class="table table-striped" *ngIf="listaProdutos.length > 0">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NOME</th>
+                <th>PREÇO</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let produto of listaProdutos">
+                <td>{{produto.id}}</td>
+                <td>{{produto.nome}}</td>
+                <td>{{produto.preco}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
