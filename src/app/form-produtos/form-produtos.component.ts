@@ -13,7 +13,6 @@ export class FormProdutosComponent {
 
   cadastrarProduto(){
     this.onSalvar.emit(this.produto);
-    this.listProdutos.push(this.produto);
     alert("Filme cadastrado com sucesso!");
     this.produto = { id: 0, nome:"", preco:0};
   }
