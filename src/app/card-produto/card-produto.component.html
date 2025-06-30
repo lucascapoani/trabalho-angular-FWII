@@ -1,7 +1,6 @@
 <div class="card">
-    <img src="/imagem.png" alt="produto" class="img_card">
-    <div class="container">
-        <h3>{{produto.nome}}</h3>
-        <p>$ {{produto.preco}}</p>
+    <ng-content select="[titulo]"></ng-content>
+    <div class="card-body">
+        <ng-content select="[conteudo]"></ng-content>
     </div>
 </div>
